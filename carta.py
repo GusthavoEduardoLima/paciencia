@@ -21,3 +21,4 @@ class Carta:
         if not isinstance(outro,Carta):
             return False
         return self.valor > outro.valor
+#teste
