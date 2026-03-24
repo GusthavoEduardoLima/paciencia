@@ -32,6 +32,34 @@ def rodar_testes():
         print("Cores diferentes: Movimento POSSÍVEL na mesa (se o valor bater).")
     else:
         print("Cores iguais: Movimento PROIBIDO na mesa.")
+import tkinter as tk
 
+def gui():
+    root = tk.Tk()
+    root.title("Teste de Interface - UFPI")
+    canvas = tk.Canvas(root, width=800, height=600, bg="darkgreen")
+    canvas.pack()
+
+    # Desenho da carta com aspas triplas para manter a formatação
+    desenho_as = """
+.-----------.
+| A         |
+|     _     |
+|    ( \ / )|
+|     \ v / |
+|      \ /  |
+|       v   |
+|           |
+|         A |
+`-----------'"""
+
+    # Criamos o retângulo (fundo da carta)
+    canvas.create_rectangle(50, 50, 160, 220, fill="white", outline="black", width=2)
+    
+    # Criamos o texto usando uma fonte MONOSPACED (essencial para ASCII art)
+    canvas.create_text(105, 135, text=desenho_as, font=("Courier", 12, "bold"))
+
+    root.mainloop()
 if __name__ == "__main__":
-    rodar_testes()
+    #rodar_testes()
+    gui()

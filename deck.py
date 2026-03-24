@@ -20,5 +20,7 @@ class Deck:
         return f"O baralho tem {self.cartas} cartas"        
     def __repr__(self):
         return self.__str__()
+    def __len__(self):
+        return len(self.cartas)
 nd = Deck()
 print(nd)
