@@ -33,6 +33,7 @@ class Mesa:
             for c in self.estoque:
                 c.face_up = False
             return None
+
     def testarTableau(self):
         print("\n=== VERIFICAÇÃO DO TABLEAU (COLUNAS) ===")
         for i, coluna in enumerate(self.tableau):
