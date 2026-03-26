@@ -29,21 +29,9 @@ class Mesa:
             return carta
         elif len(self.descarte)>0:
             self.estoque = self.descarte[::-1]
-            self.estoque = []
+            self.descarte = []
             for c in self.estoque:
                 c.face_up = False
             return None
 
-    def testarTableau(self):
-        print("\n=== VERIFICAÇÃO DO TABLEAU (COLUNAS) ===")
-        for i, coluna in enumerate(self.tableau):
-            print(f"Coluna {i + 1}:")
-            if not coluna:
-                print("  (Vazia)")
-            else:
-                for carta in coluna:
-                    # Aqui acessamos os atributos individuais de cada objeto Carta
-                    status = "ABERTA" if carta.face_up else "FECHADA"
-                    print(f"  -> Valor: {carta.valor:2} | Naipe: {carta.naipe} | Face: {status}")
-        print("========================================\n")
 

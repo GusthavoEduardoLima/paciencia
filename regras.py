@@ -28,8 +28,8 @@ class Regras:
         return n_cartas<=len(cartas_abertas)
     def movimentosPossiveis(self):
         movimentos=[]
-        origem = self.mesa.tableau[col_origem]
         for col_origem in range(7):
+            origem = self.mesa.tableau[col_origem]
             cartas_abertas = []
             for i in origem:
                 if i.face_up:
